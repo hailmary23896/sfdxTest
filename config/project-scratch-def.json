@@ -1,0 +1,19 @@
+{
+  "orgName": "Scratch Org Test3",
+  "edition": "Developer",
+  "adminEmail": "",
+  "description": "testing",
+  
+  "features": ["EnableSetPasswordInApi","Communities"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "communitiesSettings": {
+      "enableNetworksenabled":true
+    }
+  }
+}

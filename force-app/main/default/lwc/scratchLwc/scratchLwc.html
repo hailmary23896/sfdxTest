@@ -1,0 +1,48 @@
+<template>
+    <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"></lightning-input>
+    <template if:true={cases.data}>
+        <table>
+        <thead>
+            <tr>
+                <td>
+                    Account Name
+                </td>
+                <td>
+                    Account Id
+                </td>
+                <td>
+                    Case Id
+                </td>
+            </tr>
+        </thead>
+        <template for:each={cases.data} for:item="record">
+            <tr key={record.Id}>
+                <td>
+                   {record.Account.Name}
+                </td>
+                <td>
+                    {record.AccountId}
+                </td>
+                <td>
+                    {record.Id}
+                 </td>
+            </tr>
+        </template>
+           
+        </table>
+    </template>
+
+    <lightning-card>
+        <c-child-component value='test' oncustom={handleEdit}></c-child-component>
+        value from child : {valuefromChild}
+    </lightning-card>
+    
+    <br>
+    <lightning-card>
+        <lightning-flow flow-api-name="testCreateContact" ></lightning-flow>
+    </lightning-card>
+    
+
+  
+    
+</template>
